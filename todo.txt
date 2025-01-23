@@ -1,0 +1,11 @@
+- update resume
+- remove/modify my skills section
+- update what i'm doing section
+- update testimonials
+- put personal projects in portfolio page and update links
+- remove category bar in portfolio page (all, web design, etc)
+- remove blog page for now
+- remove contact page for now unless added emailing logic to javascript
+- update location in contact page
+- find black and white company logos and update them with links
+- remove facebook, twitter and instagram logos and put github and linkedin logos and links
