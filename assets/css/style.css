@@ -1485,6 +1485,13 @@
     [data-testimonials-date] {
       display: none;
     }
+
+    .modal-date {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
   
   
     /**
