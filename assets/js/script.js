@@ -34,8 +34,26 @@ const testimonialsModalFunc = function () {
 }
 
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+// for (let i = 0; i < testimonialsItem.length; i++) {
 
+//   testimonialsItem[i].addEventListener("click", function () {
+
+//     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+//     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+//     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+//     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+//     testimonialsModalFunc();
+
+//   });
+
+// }
+
+// Select modal date element
+const modalDate = document.querySelector("[data-modal-container] time");
+
+// Add click event to all testimonial items
+for (let i = 0; i < testimonialsItem.length; i++) {
   testimonialsItem[i].addEventListener("click", function () {
 
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
@@ -43,10 +61,11 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
+    // Fetch date from data attribute and update modal date
+    modalDate.innerHTML = this.getAttribute("data-testimonials-date");
+
     testimonialsModalFunc();
-
   });
-
 }
 
 // add click event to modal close button
