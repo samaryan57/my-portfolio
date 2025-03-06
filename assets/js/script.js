@@ -62,7 +62,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     // Fetch date from data attribute and update modal date
-    modalDate.innerHTML = this.getAttribute("data-testimonials-date");
+    modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
 
     testimonialsModalFunc();
   });

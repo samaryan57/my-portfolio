@@ -1470,6 +1470,10 @@
       flex-grow: 1;
       width: 35px;
     }
+
+    [data-testimonials-date] {
+      display: none;
+    }
   
     /* clients */
   
@@ -1481,17 +1485,6 @@
     }
   
     .clients-item { min-width: calc(33.33% - 35px); }
-
-    [data-testimonials-date] {
-      display: none;
-    }
-
-    .modal-date {
-      display: block;
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 10px;
-    }
   
   
     /**
