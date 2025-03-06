@@ -1481,7 +1481,10 @@
     }
   
     .clients-item { min-width: calc(33.33% - 35px); }
-  
+
+    [data-testimonials-date] {
+      display: none;
+    }
   
   
     /**
