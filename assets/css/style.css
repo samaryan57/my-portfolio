@@ -755,6 +755,12 @@
   }
   
   .clients-item img:hover { filter: grayscale(0); }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
   
   
