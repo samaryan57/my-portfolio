@@ -1477,7 +1477,7 @@
       width: 35px;
     }
 
-    .referrer-title {
+    [data-testimonials-date] {
       display: none;
     }
   
