@@ -756,7 +756,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    filter: grayscale(0.7);
+    filter: grayscale(1);
     transition: var(--transition-1);
   }
   
