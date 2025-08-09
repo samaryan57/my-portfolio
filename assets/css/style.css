@@ -777,6 +777,36 @@
   \*-----------------------------------*/
   
   .article-title { margin-bottom: 30px; }
+
+  /* Resume link icon styling */
+  .resume-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .resume-link:hover {
+    color: var(--orange-yellow-crayola);
+  }
+
+  .resume-link-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    color: var(--white-1);
+    filter: brightness(0) invert(1);
+    transition: var(--transition-1);
+  }
+
+  /* Make the resume title display inline so icon appears next to text */
+  .resume-link .article-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .resume-link:hover .resume-link-icon {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(1.2);
+  }
   
   
   /**
