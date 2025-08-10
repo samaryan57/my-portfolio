@@ -97,6 +97,53 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+// form submission handling
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  // Disable the submit button to prevent multiple submissions
+  formBtn.setAttribute("disabled", "");
+  formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Sending...</span>';
+  
+  // Submit the form to Formspree
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      // Success - show success message
+      formBtn.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon><span>Message Sent!</span>';
+      formBtn.style.background = 'var(--bg-gradient-yellow-1)';
+      form.reset();
+      
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        formBtn.removeAttribute("disabled");
+        formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Send Message</span>';
+        formBtn.style.background = '';
+      }, 3000);
+    } else {
+      throw new Error('Network response was not ok');
+    }
+  })
+  .catch(error => {
+    // Error - show error message
+    formBtn.innerHTML = '<ion-icon name="close-outline"></ion-icon><span>Error! Try Again</span>';
+    formBtn.style.background = 'var(--bittersweet-shimmer)';
+    
+    // Reset button after 3 seconds
+    setTimeout(() => {
+      formBtn.removeAttribute("disabled");
+      formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Send Message</span>';
+      formBtn.style.background = '';
+    }, 3000);
+  });
+});
+
 
 
 // page navigation variables
